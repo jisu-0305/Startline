@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Cube Rotation with Mouse Drag</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+      canvas {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas class="webgl"></canvas>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <script>
+      const canvas = document.querySelector("canvas.webgl");
+
+      // Scene 생성
+      const scene = new THREE.Scene();
+
+      // 큐브 배열
+      const cubes = [];
+      const numCubes = 5; // 큐브 개수
+
+      const geometry = new THREE.BoxGeometry(1, 1, 1);
+      const material = new THREE.MeshBasicMaterial({ color: 0xfb8191 });
+
+      // 큐브 랜덤 배치
+      for (let i = 0; i < numCubes; i++) {
+        const cube = new THREE.Mesh(geometry, material);
+        cube.position.set(
+          Math.random() * 10 - 5, // -5 ~ 5 범위의 x값
+          Math.random() * 10 - 5, // -5 ~ 5 범위의 y값
+          Math.random() * 10 - 5 // -5 ~ 5 범위의 z값
+        );
+        scene.add(cube);
+        cubes.push(cube);
+      }
+
+      // 카메라
+      const size = { width: window.innerWidth, height: window.innerHeight };
+      const camera = new THREE.PerspectiveCamera(
+        75,
+        size.width / size.height,
+        0.1,
+        1000
+      );
+      camera.position.z = 10;
+
+      // 렌더러
+      const renderer = new THREE.WebGLRenderer({ canvas: canvas });
+      renderer.setSize(size.width, size.height);
+
+      // 애니메이션
+      function animate() {
+        requestAnimationFrame(animate);
+
+        cubes.forEach((cube) => {
+          cube.rotation.x += 0.01;
+          cube.rotation.y += 0.01;
+        });
+
+        renderer.render(scene, camera);
+      }
+
+      animate();
+
+      // 화면 크기 변경 시 처리
+      window.addEventListener("resize", () => {
+        size.width = window.innerWidth;
+        size.height = window.innerHeight;
+        renderer.setSize(size.width, size.height);
+        camera.aspect = size.width / size.height;
+        camera.updateProjectionMatrix();
+      });
+
+      // 마우스 드래그로 회전 처리
+      let isDragging = false;
+      let previousMousePosition = { x: 0, y: 0 };
+
+      canvas.addEventListener("mousedown", (event) => {
+        isDragging = true;
+      });
+
+      canvas.addEventListener("mousemove", (event) => {
+        if (!isDragging) return;
+
+        const deltaX = event.clientX - previousMousePosition.x;
+        const deltaY = event.clientY - previousMousePosition.y;
+
+        // 마우스 이동에 따라 카메라 회전
+        camera.rotation.y -= deltaX * 0.005;
+        camera.rotation.x -= deltaY * 0.005;
+
+        previousMousePosition = { x: event.clientX, y: event.clientY };
+      });
+
+      canvas.addEventListener("mouseup", () => {
+        isDragging = false;
+      });
+
+      // 마우스 휠로 카메라 멀어지기 및 가까워지기 (부드러운 이동)
+      let targetCameraZ = camera.position.z; // 현재 카메라 z값
+      const zoomSpeed = 0.005; // 휠 스크롤 속도
+
+      window.addEventListener("wheel", (event) => {
+        // 휠 스크롤 방향에 따른 카메라 z값 변화
+        targetCameraZ -= event.deltaY * zoomSpeed;
+
+        // 카메라 이동을 자연스럽게 만들어주기 위해 moveCameraTo 함수로 애니메이션 처리
+        moveCameraTo(camera.position.x, camera.position.y, targetCameraZ);
+      });
+
+      // 자연스럽게 카메라 이동 함수
+      let cameraMoveAnimation = null;
+
+      function moveCameraTo(targetX, targetY, targetZ) {
+        const speed = 0.005; // 이동 속도를 더 느리게 하기 위해 더 작은 값으로 설정
+        cameraMoveAnimation = function () {
+          const currentX = camera.position.x;
+          const currentY = camera.position.y;
+          const currentZ = camera.position.z;
+
+          // 카메라의 위치가 목표 값에 도달할 때까지 부드럽게 이동
+          if (
+            Math.abs(currentX - targetX) > 0.01 ||
+            Math.abs(currentY - targetY) > 0.01 ||
+            Math.abs(currentZ - targetZ) > 0.01
+          ) {
+            camera.position.x += (targetX - currentX) * speed;
+            camera.position.y += (targetY - currentY) * speed;
+            camera.position.z += (targetZ - currentZ) * speed;
+
+            // 애니메이션 계속해서 업데이트
+            requestAnimationFrame(cameraMoveAnimation);
+          }
+        };
+
+        // 애니메이션 시작
+        cameraMoveAnimation();
+      }
+    </script>
+  </body>
+</html>
