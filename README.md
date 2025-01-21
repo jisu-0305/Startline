@@ -190,6 +190,70 @@ ex. 스카이프는 원조 음성채팅 서비스이지만, 커뮤니티 기능�
 - 컨설턴트 님께서 마라톤을 할 때 차고 있던 워치로 친구의 위치를 확인한다거나, 경쟁 기능 등을 제안해주셨기 때문에 검토. 웹에서 워치로 알림을 줄 수 있는지 정보 검색. 앱이 아니라면 힘들 것 같다는 의견. 카카오톡으로 알림을 전송해주는 정도라면 가능할 것이라는 의견
 - 이 외에도 실질적으로 사용자가 필요로 하는 기능이 무엇일지 고민함. 이에 설문조사를 작성하여 배포하도록 계획함.
 
+### 2025-01-20-monday
+
+- 프로젝트 명 회의 후 '꼬마'로 결정
+  > go go marathon의 줄임말
+
+* 본래 웹 개발을 하려고 했으나, 컨설턴트 님의 피드백으로 앱 개발로 진행해도 됨을 확인
+* 앱 개발로 진행 변경, 워치 연동 고려 시작
+
+* 기획 정리를 위한 figma 작업 진행
+  ![figma 페이지](./20250120/img/figma.png)
+
+### 2025-01-21-tuesday
+
+- 코치 님의 데일리 코칭 수강
+
+  - UI 레퍼런스 찾는 곳: 핀터레스트, notefolio, figma community 등
+    figma community는 해당 프레임 레이아웃까지 가져와서 작업할 수 있는 경우도 있음
+
+  - UX를 찾고 싶을 때는 유저 스푼을 사용하고 있음
+
+  - 피그마 플러그인 추천 : Background remover, 사진 background 바로바로 없애서 쓸 수 있음
+
+  - Plugin을 많이 활용하면 좋음
+
+    - Icon 플러그인 추천: Phospher Icons 플러그인, React Icons 플러그인
+
+  - [와이어프레임 체크리스트]
+
+    - 필요한 기능들이 포함되어 있는가?
+    - 와이어프레임 바탕으로 필요한 데이터와 API를 작성하자!
+    - 해당 데이터를 어떻게 저장하고, 관리할지
+    - 해당 버튼, 이미지 등을 눌렀을 때 연결되는 페이지가 어디안가? 화면끼리 화살표로 연결하기
+    - UI가 변동될 사항에서 어떻게 처리할 것인가? 제한을 걸 것인가? 생각해 보기(닉네임 긴 경우 등)
+    - 사용자가 놓친 부분에서 발생하는 에러페이지/모달을 만들었는가?
+
+- 앱 개발을 위한 기술 스택 회의, Kotlin으로 안드로이드 네이티브 앱을 개발하도록 결정
+
+- Android Studio 설치
+
+  [sdk 설치 참조](https://bbmsk2.tistory.com/22)
+
+- Kotlin으로 프론트 작업을 하기 위한 공부 진행
+  [코틀린 작동 확인](https://play.kotlinlang.org/#eyJ2ZXJzaW9uIjoiMi4xLjAiLCJwbGF0Zm9ybSI6ImphdmEiLCJhcmdzIjoiIiwibm9uZU1hcmtlcnMiOnRydWUsInRoZW1lIjoiaWRlYSIsImNvZGUiOiIvKipcbiAqIFlvdSBjYW4gZWRpdCwgcnVuLCBhbmQgc2hhcmUgdGhpcyBjb2RlLlxuICogcGxheS5rb3RsaW5sYW5nLm9yZ1xuICovXG5mdW4gbWFpbigpIHtcbiAgICBwcmludGxuKFwiSGVsbG8sIHdvcmxkISEhXCIpXG59In0=)
+
+  [시청한 기본 문법 강의](https://www.inflearn.com/course/%EC%BD%94%ED%8B%80%EB%A6%B0-%EB%AC%B8%EB%B2%95%EC%B4%9D%EC%A0%95%EB%A6%AC-1%EC%8B%9C%EA%B0%84?attributionToken=kwHwkgoMCLC3vLwGEMTGi5oDEAEaJDY3OTkwZjViLTAwMDAtMjljNy04MTMxLTNjMjg2ZDQzMTE3YSoHMTUzOTM2NjI4xcvzF46-nRXUsp0VwvCeFaOAlyKo5aott7eMLZvWty3hq-sw5KvrMJruxjCOkckwkPeyMJjWty06DmRlZmF1bHRfc2VhcmNoSAFYAWgBegJzaQ)
+
+  [참조한 안드로이드 앱 개발 유튜브 영상](https://www.youtube.com/watch?v=uGoLbjGM-CU&list=PLG7te9eYUi7tCFYQm4uPGhiUbtOcF19EL)
+
+  [기본 안드로이드 앱 개발 참조 사이트](https://developer.android.com/codelabs/basic-android-kotlin-compose-first-app?hl=ko&_gl=1*jxaros*_up*MQ..*_ga*NjE3Mzg5NDg3LjE3Mzc0Mjg1Mjc.*_ga_6HH9YJMN9M*MTczNzQyODUyNy4xLjAuMTczNzQyODUyNy4wLjAuMjAxOTY2MTY4Nw..#0)
+
+- 본격적으로 워치 연동 여부 확인
+
+  [연동을 위해 참조한 url 1](https://developer.android.com/training/wearables/get-started/creating?hl=ko#run-watch)
+
+  [연동을 위해 참조한 url 2]()
+
+- 갤럭시 워치 5로 여러 번 pair를 시도했으나, 노트북과 워치에서 같은 wi-fi에 접속했음에도 연결 IP가 다르게 떠서 연결 실패
+  ```
+  error: protocol fault (couldn't read status message): No error
+  ```
+- 전날 한 figma 작업 중 기능 정리 미흡으로 페이지 정돈이 되지 않는 것을 느껴 다시 기능 정리 회의 진행
+
+  [진행한 기능 정리 내용 notion](https://www.notion.so/247c2b23bf9e42ec9c1883e389ca429b)
+
 ## 관심 있는 기술
 
 - react (2025-01-14 추가)
