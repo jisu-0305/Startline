@@ -254,6 +254,94 @@ ex. 스카이프는 원조 음성채팅 서비스이지만, 커뮤니티 기능�
 
   [진행한 기능 정리 내용 notion](https://www.notion.so/247c2b23bf9e42ec9c1883e389ca429b)
 
+### 2025-01-22-wednesday
+
+- 워치 연동 기능을 수행하기 위해 Android Studio에서 갤럭시 워치로 연동하여 테스트하는 것이 가능한지, 페어링 기능을 다시 시도해봄
+
+  ```
+  C:\Users\SSAFY\AppData\Local\Android\Sdk\platform-tools>adb pair 192.168.137.74:35413
+  Enter pairing code: 621435
+  * daemon not running; starting now at tcp:5037
+  * daemon started successfully
+  Successfully paired to 192.168.137.74:35413 [guid=adb-RFAT71WAQPA-fYtO2u]
+
+  C:\Users\SSAFY\AppData\Local\Android\Sdk\platform-tools>adb devices
+  List of devices attached
+  adb-RFAT71WAQPA-fYtO2u._adb-tls-connect._tcp    device
+  ```
+
+  그 결과 무사히 연결되는 것을 확인함
+
+  Android Studio의 프로젝트는 워치에 설치되는 방식으로 구동 테스트가 됨
+
+* Kotlin으로 프론트를 개발할 때 시간이 얼마나 걸릴지, 어떻게 구현을 하면 좋을지, Kotlin에 대해 아는 것이 없다 보니 알 수가 없었음
+
+  이에 싸피의 모바일 트랙 강의 중 Android 관련 내용을 간단히 공부함
+
+  ```
+  안드로이드도 뷰처럼 컴포넌트를 여러 개 조합해서 하나의 앱을 만듦
+
+  앱 내에서 컴포넌트는 독립적으로 실행됨
+  ㄴ안드로이드 시스템이 라이프 사이클을 관리함
+
+  1. Activity: UI를 구성하기 위한 컴포넌트, 사용자 화면을 제공하는 컴포넌트
+  ㄴ액티비티 자체는 앱의 실행 단위인 컴포넌트고, 액티비티를 실행하면 빈 화면이 보임, 그래서 액티비티에 버튼, 문자열, 이미지 등을 출력해줘야 함(화면에 보이는 대부분 요소는 View의 하위 클래스)
+  2. Service: UI 없이 백그라운드에서 수행하는 컴포넌트(ex. mp3, GPS 작동)
+  3. Broadcast Receiver: 이벤트로 수행되는 컴포넌트(ex. 시스템에 배터리가 부족하거나 시스템 부팅이 완료되는 등 이벤트 발생시 해야 되는 작업이 있다면, 이벤트를 수신하는 컴포넌트)
+  4. Content Provider: 어플리케이션 간 데이터를 공유하기 위한 컴포넌트 (ex. 주소록 공유 등..)
+
+  AndroidManifest.xml: 앱의 메인 환경 파일 - 보여지는 앱 아이콘 등이 보여짐
+  ㄴ다른 xml을 지칭할 때 @로 지칭함
+  ㄴ카테고리가 LAUNCHER고, action이 MAIN 적혀 있는 건 아이콘 클릭했을 때 이것을 실행하겠다는 정도 의미임, 런처에서 클릭하면 이 Activity를 실행하겠다는 의미로 이해하기
+  MainActivity.java: 화면 구성을 위한 액티비티 컴포넌트, 실제 이 파일이 수행되어 화면에 UI가 출력
+
+  res: 앱의 모든 리소스 파일이 res 폴더 하위에 위치
+
+  ~MainActivity.kt~의 내용 분석~
+  enableEdgeToEdge()는 화면을 꽉 채우게 한다는 것임
+
+  setContentView(R.layout.activity_main)
+  은 리소스(res) 밑의, layout 밑의 activity_main
+
+  화면에 이미지도 버튼도, 여러 요소를 보여줘야 하는데, 이러한 조합된 그룹을 ViewGroup이라 함
+
+  기본 레이아웃 클래스들은 아래와 같음
+  LinearLayout은 선형 배치
+  RelativeLayout은 상대 위치
+  FrameLayout은 겹쳐서 배치
+  GridLayout 표 형태로 배치
+  ConstraintLayout은 계층 구조로 배치..
+
+  View 아래로 서브 클래스 존재(Button, EditText, CheckBox 등)
+  View에 색상, 포커스, 인터렉티브 등 공통 속성들 줄 수 잇음
+  ```
+
+  공부 결과 Kotlin 역시 Vue처럼 컴포넌트 단위로 나누어 개발할 수 있다는 점을 알 수 있었고, 기본 문법을 공부하고 나면 프론트 개발을 해낼 수 있을 것 같다는 생각을 할 수 있었음
+
+- 요구사항 및 기능 명세서를 작성하기 위해 논의 진행
+- 프로젝트의 방향성이 처음과 달라진 느낌이 있어 연결이 되지 않는다는 우려가 존재했음, 이에 컨설턴트 님과 상담 시간을 갖고 방향을 더욱 잡아가려고 함
+
+#### 컨설턴트 님의 의견
+
+! 설문조사의 표본 수 자체가 적다는 문제
+
+! 선택과 집중 추천: 일단 구현을 하고 성능 개선은 나중에 하는 것으로 생각하기
+
+! 전체 마라톤 중 몇 퍼센트의 러너가 커버될지 등을 고민해 보기
+
+! 페르소나를 명확하게 하기: 대회를 등록하는 사람까지 고려할 필요 없음
+
+! 이미 있는지를 신경 쓰기보다 서비스에 필요한 것을 개발하기
+
+> 상담 이후, 주제를 그대로 가져가면서 구체적으로 기능을 정하고 제대로 개발을 할 수 있을 법한 일정을 정리하자고 이야기를 마무리함
+
+> 이에 워치의 기능을 자유롭게 논의해 보고, 요구사항 명세를 정리하면서 기능 명세로 발전시키는 방식으로 추가 일정 진행
+
+#### 내일 해야 할 일
+
+- 남은 시간이 많지 않아 명세 정리 및 일정 정립을 다 못했음
+- 이에 위 사항을 달성할 예정
+
 ## 관심 있는 기술
 
 - react (2025-01-14 추가)
