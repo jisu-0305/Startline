@@ -342,6 +342,93 @@ ex. 스카이프는 원조 음성채팅 서비스이지만, 커뮤니티 기능�
 - 남은 시간이 많지 않아 명세 정리 및 일정 정립을 다 못했음
 - 이에 위 사항을 달성할 예정
 
+### 2025-01-23-thursday
+
+- 안드로이드 스튜디오 Front 빌드 공부
+
+  ```
+  package com.example.mobilewearapp
+
+  import android.os.Bundle
+  import androidx.activity.ComponentActivity
+  import androidx.activity.compose.setContent
+  import androidx.activity.enableEdgeToEdge
+  import androidx.compose.foundation.layout.*
+  import androidx.compose.material.*
+  import androidx.compose.runtime.Composable
+  import androidx.compose.ui.Alignment
+  import androidx.compose.ui.Modifier
+  import androidx.compose.ui.tooling.preview.Preview
+  import com.example.mobilewearapp.ui.theme.MobileWearAppTheme
+
+  class MainActivity : ComponentActivity() {
+      override fun onCreate(savedInstanceState: Bundle?) {
+          super.onCreate(savedInstanceState)
+          enableEdgeToEdge() // 전체 화면
+          setContent {
+              MobileWearAppTheme {
+                  Scaffold(
+                      modifier = Modifier.fillMaxSize(),
+                      topBar = {
+                          TopAppBar(
+                              colors = TopAppBarDefaults.topAppBarColors(
+                                  containerColor = MaterialTheme.colorScheme.primaryContainer,
+                                  titleContentColor = MaterialTheme.colorScheme.primary,
+                              ),
+                              title = {
+                                  Text("Small Top App Bar")
+                              }
+                          )
+                      },
+                      ) {
+                      Box(
+                          modifier = Modifier
+                              .fillMaxSize()
+                              .padding(innerPadding),
+                          contentAlignment = Alignment.Center // 중앙 정렬
+                      ) {
+                          Greeting(name = "ㅁㅁ")
+                      }
+                  }
+              }
+          }
+      }
+  }
+  //컴포즈 하나가 하나의 뷰
+  @Composable
+  fun Greeting(name: String, modifier: Modifier = Modifier) {
+      Text(
+          text = "Hello~ $name!",
+          modifier = modifier
+      )
+  }
+
+  @Preview(showBackground = true)
+  @Composable
+  fun GreetingPreview() {
+      MobileWearAppTheme {
+          Greeting("ㅁㄴㅇㄹ")
+      }
+  }
+  ```
+
+  - 위와 같은 코드로 TopBar UI를 짠 뒤, 아래와 같이 실제 핸드폰과 연동하여 App 화면을 확인하였음
+  - 확인하는 과정에서는 material3를 사용할 경우 미래에 사라질 수 있는 코드에 대한 경고 확인 어노테이션을 달아야 코드를 사용할 수 있는 문제가 있었음
+  - 공식 문서도 material3를 사용하는 기준으로 설명이 되어 있는 듯하여 일반 material로 UI 구성하는 방법을 고민해야 할 것 같음
+
+  ![Mobile Test Image](./20250123/img/capture.png)
+
+- 와이어프레임 구상
+  ![와이어프레임 구상 이미지 1](./20250123/img/01.jpg)
+
+  ![와이어프레임 구상 이미지 2](./20250123/img/02.jpg)
+
+  ![와이어프레임 구상 이미지 3](./20250123/img/03.jpg)
+
+#### 내일 해야 할 일
+
+- Figma 완료, 기획 완료 후 개발 진행 준비
+
 ## 관심 있는 기술
 
 - react (2025-01-14 추가)
