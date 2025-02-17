@@ -9,11 +9,11 @@
 <br/>
 
 <p align=center>
-  <a href="팀노션 주소">팀 노션</a>
+  <a href="https://seemly-watercress-ad1.notion.site/A808-174ea78af86480e082a1f97c699a4900?pvs=4">팀 노션</a>
   &nbsp; | &nbsp; 
-  <a href="https:">figma</a> 
+  <a href="https://www.figma.com/design/0pk2ab9dAFeweuNbEWo9Fi/%EA%BC%AC%EB%A7%88-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8?node-id=1-2&p=f&t=bluw91USVGKrm0Bn-0">figma</a> 
   &nbsp; | &nbsp; 
-  <a href="https">개발 위키</a>
+  <a href="https://seemly-watercress-ad1.notion.site/174ea78af8648193bc0cf80ab138a550?v=174ea78af86481b9a5f9000cfbd74ede&pvs=4">개발 위키</a>
 </p>
 
 
