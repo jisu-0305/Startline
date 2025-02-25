@@ -65,6 +65,11 @@ class MarathonViewModel(application: Application) : AndroidViewModel(application
             val marathon = db.marathonDao().getMarathon()
             val friendList = db.friendDao().getAllFriends()
 
+            myInfo!!.id = 56;
+            myInfo.name = "이재훈"
+            myInfo.targetPace = 700
+            myInfo.runningDistance = 1000000
+
             if (myInfo != null && marathon != null) {
                 marathonRealTimeDataUtil.setReadyData(myInfo, marathon, friendList)
                 sendMarathonReady()
@@ -120,7 +125,7 @@ class MarathonViewModel(application: Application) : AndroidViewModel(application
                             val myInfo = db.myInfoDao().getMyInfo()
                             if (myInfo != null) {
                                 val intent = Intent(getApplication(), MarathonRunService::class.java).apply {
-                                    putExtra("userId", myInfo.id)
+                                    putExtra("userId", 56)
                                 }
                                 getApplication<Application>().startForegroundService(intent)
                             } else {

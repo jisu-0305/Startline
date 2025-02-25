@@ -78,15 +78,16 @@ class MarathonRealTimeDataUtil(private val context: Context) {
                     currentDistanceRate = 0.0f,
                     gapDistance = 0
                 )
-            } + FriendDto(
-                userId = myInfo.id,
-                friendName = myInfo.name,
-                currentDistance = 0,
-                isMe = true,
-                rank = 0,
-                currentDistanceRate = 0.0f,
-                gapDistance = 0
-            )
+            }
+//            + FriendDto(
+//                userId = myInfo.id,
+//                friendName = myInfo.name,
+//                currentDistance = 0,
+//                isMe = true,
+//                rank = 0,
+//                currentDistanceRate = 0.0f,
+//                gapDistance = 0
+//            )
         }
 
         Log.d("marathon", "[Marathon Ready] MarathonRealTimeData: $marathonRealTimeData")
