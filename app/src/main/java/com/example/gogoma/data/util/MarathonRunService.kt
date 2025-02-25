@@ -40,16 +40,16 @@ class MarathonRunService : Service() {
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         currentUserId = intent?.getIntExtra("userId", 0) ?: 0
 
-        UserDistanceRepository.createInitialUserData(
-            currentUserId,
-            onSuccess = { Log.d("MarathonRunService", "초기 데이터 생성 성공") },
-            onFailure = { exception ->
-                Log.e("MarathonRunService", "초기 데이터 생성 실패: ${exception.message}")
-            }
-        )
-
-        cumulativeDistance = 0
-        previousLocation = null
+//        UserDistanceRepository.createInitialUserData(
+//            currentUserId,
+//            onSuccess = { Log.d("MarathonRunService", "초기 데이터 생성 성공") },
+//            onFailure = { exception ->
+//                Log.e("MarathonRunService", "초기 데이터 생성 실패: ${exception.message}")
+//            }
+//        )
+//
+//        cumulativeDistance = 0
+//        previousLocation = null
 
         startLocationUpdates()
 
@@ -79,14 +79,14 @@ class MarathonRunService : Service() {
                         Log.d("MarathonRunService", "이번 이동 거리: $formattedIncrement km, 누적 거리: $formattedCumulative km")
 
                         // DB 업데이트: 누적 거리를 cm 단위로 업데이트
-                        UserDistanceRepository.updateUserCumulativeDistance(
-                            currentUserId,
-                            cumulativeDistance,
-                            onSuccess = { Log.d("MarathonRunService", "Firebase 업데이트 성공: $cumulativeDistance cm") },
-                            onFailure = { exception ->
-                                Log.e("MarathonRunService", "Firebase 업데이트 실패: ${exception.message}")
-                            }
-                        )
+//                        UserDistanceRepository.updateUserCumulativeDistance(
+//                            currentUserId,
+//                            cumulativeDistance,
+//                            onSuccess = { Log.d("MarathonRunService", "Firebase 업데이트 성공: $cumulativeDistance cm") },
+//                            onFailure = { exception ->
+//                                Log.e("MarathonRunService", "Firebase 업데이트 실패: ${exception.message}")
+//                            }
+//                        )
                     }
                     if (previousLocation == null) {
                         Log.d("MarathonRunService", "첫 위치 업데이트입니다.")

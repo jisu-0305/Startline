@@ -77,16 +77,16 @@ class MarathonRealTimeDataUtil(private val context: Context) {
                     rank = 0,
                     currentDistanceRate = 0.0f,
                     gapDistance = 0
-                )
-            } + FriendDto(
-                userId = myInfo.id,
-                friendName = myInfo.name,
-                currentDistance = 0,
-                isMe = true,
-                rank = 0,
-                currentDistanceRate = 0.0f,
-                gapDistance = 0
-            )
+                )}
+//            } + FriendDto(
+//                userId = myInfo.id,
+//                friendName = myInfo.name,
+//                currentDistance = 0,
+//                isMe = true,
+//                rank = 0,
+//                currentDistanceRate = 0.0f,
+//                gapDistance = 0
+//            )
         }
 
         Log.d("marathon", "[Marathon Ready] MarathonRealTimeData: $marathonRealTimeData")
@@ -97,15 +97,21 @@ class MarathonRealTimeDataUtil(private val context: Context) {
     }
  
     fun updateData() {
-        marathonRealTimeData.currentTime += 1
+        //marathonRealTimeData.currentTime += 1
 
-        UserDistanceRepository.updateUserCurrentTime(
-            marathonRealTimeData.userId,
-            marathonRealTimeData.currentTime,
-            onSuccess = { Log.d("MarathonRunService", "Firebase 시간 업데이트 성공") },
-            onFailure = { exception ->
-                Log.e("MarathonRunService", "Firebase 업데이트 실패: ${exception.message}")
-            })
+        UserDistanceRepository.getUserCurrentTime(marathonRealTimeData.userId) {currentTime ->
+            if (currentTime != null) {
+                marathonRealTimeData.currentTime = currentTime
+            }
+        }
+
+//        UserDistanceRepository.updateUserCurrentTime(
+//            marathonRealTimeData.userId,
+//            marathonRealTimeData.currentTime,
+//            onSuccess = { Log.d("MarathonRunService", "Firebase 시간 업데이트 성공") },
+//            onFailure = { exception ->
+//                Log.e("MarathonRunService", "Firebase 업데이트 실패: ${exception.message}")
+//            })
 
         marathonRealTimeData.currentDistance += 1
         marathonRealTimeData.currentPace = marathonRealTimeData.currentTime * 100000 / marathonRealTimeData.currentDistance

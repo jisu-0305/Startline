@@ -6,8 +6,8 @@ import androidx.room.PrimaryKey
 @Entity
 data class MyInfo(
     @PrimaryKey(autoGenerate = false)
-    val id: Int,
-    val name: String,
-    val targetPace: Int,
-    val runningDistance: Int
+    var id: Int,
+    var name: String,
+    var targetPace: Int,
+    var runningDistance: Int
 )

@@ -65,6 +65,11 @@ class MarathonViewModel(application: Application) : AndroidViewModel(application
             val marathon = db.marathonDao().getMarathon()
             val friendList = db.friendDao().getAllFriends()
 
+            myInfo!!.id = 56;
+            myInfo.name = "이재훈"
+            myInfo.targetPace = 800
+            myInfo.runningDistance = 1000000
+
             if (myInfo != null && marathon != null) {
                 marathonRealTimeDataUtil.setReadyData(myInfo, marathon, friendList)
                 sendMarathonReady()
@@ -97,13 +102,13 @@ class MarathonViewModel(application: Application) : AndroidViewModel(application
                 Log.e("marathon", "[Marathon Ready] 상태 전송 실패", e)
             }
 
-        UserDistanceRepository.createInitialUserData(
-            marathonRealTimeData.userId,
-            onSuccess = { Log.d("MarathonRunService", "초기 데이터 생성 성공") },
-            onFailure = { exception ->
-                Log.e("MarathonRunService", "초기 데이터 생성 실패: ${exception.message}")
-            }
-        )
+//        UserDistanceRepository.createInitialUserData(
+//            marathonRealTimeData.userId,
+//            onSuccess = { Log.d("MarathonRunService", "초기 데이터 생성 성공") },
+//            onFailure = { exception ->
+//                Log.e("MarathonRunService", "초기 데이터 생성 실패: ${exception.message}")
+//            }
+//        )
 
     }
 
