@@ -4,7 +4,7 @@
 ![Frame 30](메인화면 이미지 주소)
 </div>
 
-> 배포 링크 <br /> > **도메인 주소 링크, 또는 apk 파일 존재 링크**
+> 배포 링크 <br /> > **https://drive.google.com/drive/folders/1yEKb8Xr3KZ6qOkDoXCN2YFPnJTvZlesq**
 
 <br/>
 
@@ -43,9 +43,9 @@
 
 </aside>
 
-- 개발 기간: 25.01.06~25.02.22(7주)
+- 개발 기간: 25.01.06~25.02.26 / 7주+1주(본선) 
 - 인원: 6명
-- 서비스 개요 : 마라톤 플랫폼 어플(모바일, 워치)
+- 서비스 개요 : 마라톤 플랫폼 어플리케이션 (모바일, 워치)
 
 <br />
 
@@ -53,29 +53,34 @@
 
 ### 기능-1
 
-> 기능1 설명글
+> 마라톤 등록 자동화 : 대회 등록 프로세스를 자동화하여 편의성을 향상하는 기능 제공
 
 <img alt='' src="이미지나 짤 링크" />
 
 
 ### 기능-2
 
-> 기능2 설명글
+> 마라톤 간편 신청 / 간편 결제 : 직관적인 UI를 통해 간편하게 마라톤 신청 및 결제하는 기능 제공
 
 <img alt='' src="이미지나 짤 링크" />
 
 ### 기능-3
 
-> 기능3 설명글
+> 카카오 친구 연동 : 카카오 친구 목록을 자동 조회하여 마라톤에 참여한 친구를 손쉽게 등록하는 기능 제공
 
 <img alt='' src="이미지나 짤 링크" />
 
 ### 기능-4
 
-> 기능4 설명글
+> 모바일, 워치 연동을 통한 개인 기록 조회 : 모바일 및 스마트워치를 통해 사용자가 자신의 마라톤 기록을 실시간으로 확인하는 기능 제공
 
 <img alt='' src="https://" />
 
+### 기능-5
+
+> 모바일, 워치 연동을 통한 실시간 팀 정보 조회 : 마라톤이 진행중일 때 팀의 실시간 위치, 인접 팀원 정보, 랭킹을 제공
+
+<img alt='' src="https://" />
 
 <br />
 
@@ -85,58 +90,68 @@
     <thead>
         <tr>
             <th>분류</th>
-            <th>기술 스택(아래 내용은 예시!!)</th>
+            <th>기술 스택</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>
-                  <p>프론트엔드</p>
-            </td>
-            <td>
-                  <img src="https://img.shields.io/badge/Vue.js-35495E?logo=vue.js&logoColor=4FC08D">
-                  <img src="https://img.shields.io/badge/Vuetify-1867C0?logo=vuetify&logoColor=AEDDFF">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>백엔드</p>
-            </td>
+            <td><p>백엔드</p></td>
             <td>
                 <img src="https://img.shields.io/badge/Java-007396?logo=java&logoColor=white"/>
-                <img src="https://img.shields.io/badge/Spring-6DB33F?logo=spring&logoColor=white">
+                <img src="https://img.shields.io/badge/Spring%20Boot-6DB33F?logo=springboot&logoColor=white"/>
             </td>
         </tr>
         <tr>
+            <td><p>DB</p></td>
             <td>
-                <p>인프라</p>
-            </td>
-            <td>
-                <img src="https://img.shields.io/badge/Nginx-009639?logo=nginx&logoColor=white">
-                <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?logo=github-actions&logoColor=white">
-                 <img src="https://img.shields.io/badge/Amazon%20AWS-232F3E?logo=amazon-aws&logoColor=white">
+                <img src="https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white"/>
             </td>
         </tr>
         <tr>
+            <td><p>모바일 &amp; Watch</p></td>
             <td>
-                <p>협업</p>
-            </td>
-            <td>
-                <img src="https://img.shields.io/badge/Notion-000000?logo=notion&logoColor=white">
-                <img src="https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white">
-                <img src="https://img.shields.io/badge/Figma-F24E1E?logo=figma&logoColor=white">
+                <img src="https://img.shields.io/badge/Kotlin-0095D5?logo=kotlin&logoColor=white"/>
+                <img src="https://img.shields.io/badge/Room-009688?logo=android&logoColor=white"/>
+                <img src="https://img.shields.io/badge/Retrofit-FF6F00?logo=retrofit&logoColor=white"/>
+                <img src="https://img.shields.io/badge/Jetpack%20Compose-4285F4?logo=android&logoColor=white"/>
             </td>
         </tr>
-                <tr>
+        <tr>
+            <td><p>API</p></td>
             <td>
-                <p>최적화</p>
+                <img src="https://img.shields.io/badge/FCM-FFCA28?logo=firebase&logoColor=black"/>
+                <img src="https://img.shields.io/badge/Realtime%20DB-FFCA28?logo=firebase&logoColor=black"/>
+                <img src="https://img.shields.io/badge/Google%20Vision%20API-4285F4?logo=google&logoColor=white"/>
+                <img src="https://img.shields.io/badge/Google%20Document%20AI-4285F4?logo=google&logoColor=white"/>
+                <img src="https://img.shields.io/badge/OpenAI-412991?logo=openai&logoColor=white"/>
+                <img src="https://img.shields.io/badge/Kakao%20OAuth-FFCD00?logo=kakao&logoColor=black"/>
+                <img src="https://img.shields.io/badge/Kakao%20Pay-FFCD00?logo=kakao&logoColor=black"/>
+                <img src="https://img.shields.io/badge/Open%20Banking-0066FF?logo=bank&logoColor=white"/>
             </td>
+        </tr>
+        <tr>
+            <td><p>협업</p></td>
             <td>
-                <img src="https://img.shields.io/badge/Lighthouse-F44B21?logo=lighthouse&logoColor=white">
+                <img src="https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white"/>
+                <img src="https://img.shields.io/badge/GitLab-FCA121?logo=gitlab&logoColor=white"/>
+                <img src="https://img.shields.io/badge/Jira-0052CC?logo=jira&logoColor=white"/>
+                <img src="https://img.shields.io/badge/Notion-000000?logo=notion&logoColor=white"/>
+                <img src="https://img.shields.io/badge/Figma-F24E1E?logo=figma&logoColor=white"/>
+            </td>
+        </tr>
+        <tr>
+            <td><p>인프라</p></td>
+            <td>
+                <img src="https://img.shields.io/badge/Jenkins-D24939?logo=jenkins&logoColor=white"/>
+                <img src="https://img.shields.io/badge/NGINX-009639?logo=nginx&logoColor=white"/>
+                <img src="https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white"/>
+                <img src="https://img.shields.io/badge/AWS-232F3E?logo=amazon-aws&logoColor=white"/>
             </td>
         </tr>
     </tbody>
 </table>
+
+
 
 <br />
 
