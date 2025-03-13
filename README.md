@@ -68,7 +68,7 @@
 
 > 직관적인 UI를 통해 간편하게 마라톤 신청 및 결제하는 기능 제공
 
-<img alt='' src="https://github.com/user-attachments/assets/4adbdf85-4d9d-4538-ac34-b2d891ae2e33" />
+<img alt='' src="https://github.com/user-attachments/assets/2693760f-a7bd-42a4-b161-df04fa917803" />
 
 ### 기능-3
 
