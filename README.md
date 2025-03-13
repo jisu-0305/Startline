@@ -68,7 +68,7 @@
 
 > 마라톤 간편 신청 / 간편 결제 : 직관적인 UI를 통해 간편하게 마라톤 신청 및 결제하는 기능 제공
 
-<img alt='' src="이미지나 짤 링크" />
+<img alt='' src="https://github.com/user-attachments/assets/4adbdf85-4d9d-4538-ac34-b2d891ae2e33" />
 
 ### 기능-3
 
