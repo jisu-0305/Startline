@@ -75,9 +75,9 @@
 
 > 카카오 친구 연동 : 카카오 친구 목록을 자동 조회하여 마라톤에 참여한 친구를 손쉽게 등록하는 기능 제공
 
-<img alt='friend link operation of mobile and watch' src="https://github.com/user-attachments/assets/27e8cb31-43ca-4c89-b1c7-9bc870493a2f" />
+<img alt='friend link operation of mobile and watch' src="https://github.com/user-attachments/assets/f401b4fe-bd9d-47fe-8f00-76a9a3f2ebde" />
 
-<img style="margin-right: 2px; max-width: calc(50% - 2px);" alt='mobile friend list page' src="https://github.com/user-attachments/assets/41ea35ce-02b1-43e1-9d51-1194f4330df5" /><img style="margin-left: 2px; max-width: calc(50% - 2px);" alt='mobile friend link page' src="https://github.com/user-attachments/assets/d1731ad8-dd13-4e5d-a22e-691527711fee" />
+<img style="margin-right: 2px; max-width: calc(50% - 2px);" alt='mobile friend list page' src="https://github.com/user-attachments/assets/8b6407b7-d646-4eb0-9d77-8393c66af853" /><img style="margin-left: 2px; max-width: calc(50% - 2px);" alt='mobile friend link page' src="https://github.com/user-attachments/assets/6b670a61-29c3-4072-aa70-67b335644bfe" />
 
 ### 기능-4
 
