@@ -77,7 +77,8 @@
 
 <img alt='friend link operation of mobile and watch' src="https://github.com/user-attachments/assets/f401b4fe-bd9d-47fe-8f00-76a9a3f2ebde" />
 
-<img style="margin-right: 2px; max-width: calc(50% - 2px);" alt='mobile friend list page' src="https://github.com/user-attachments/assets/8b6407b7-d646-4eb0-9d77-8393c66af853" /><img style="margin-left: 2px; max-width: calc(50% - 2px);" alt='mobile friend link page' src="https://github.com/user-attachments/assets/6b670a61-29c3-4072-aa70-67b335644bfe" />
+<img width="49%" alt='mobile friend list page' src="https://github.com/user-attachments/assets/8b6407b7-d646-4eb0-9d77-8393c66af853" />
+<img width="49%" alt='mobile friend link page' src="https://github.com/user-attachments/assets/6b670a61-29c3-4072-aa70-67b335644bfe" />
 
 ### 기능-4
 
