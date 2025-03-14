@@ -59,8 +59,9 @@
 ## 🚀 핵심 기능
 
 ### 마라톤 등록 자동화
+
 > 대회 등록 프로세스를 자동화하여 편의성을 향상하는 기능 제공
-<br>
+> <br>
 
 <img alt='' src="https://github.com/user-attachments/assets/e61c21e5-557e-4a58-bbcc-e4b5679bbb47" />
 
@@ -74,7 +75,9 @@
 
 > 카카오 친구 연동 : 카카오 친구 목록을 자동 조회하여 마라톤에 참여한 친구를 손쉽게 등록하는 기능 제공
 
-<img alt='' src="이미지나 짤 링크" />
+<img alt='t' src="https://github-production-user-asset-6210df.s3.amazonaws.com/175587334/422596658-d1731ad8-dd13-4e5d-a22e-691527711fee.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250314%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250314T013642Z&X-Amz-Expires=300&X-Amz-Signature=7bd42637368a5fc2d24023cff4f7ad94e4bc05649d45048703a941161ada0fde&X-Amz-SignedHeaders=host" />
+
+<img style="margin-right: 2px; max-width: calc(50% - 2px);" alt='t' src="https://github-production-user-asset-6210df.s3.amazonaws.com/175587334/422596627-41ea35ce-02b1-43e1-9d51-1194f4330df5.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250314%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250314T013612Z&X-Amz-Expires=300&X-Amz-Signature=b05561868bea7bea64551921d605bbd0dce3ad0b4d94aab6cbaa0bfef102d468&X-Amz-SignedHeaders=host" /><img style="margin-left: 2px; max-width: calc(50% - 2px);" alt='friend' src="https://github-production-user-asset-6210df.s3.amazonaws.com/175587334/422596628-27e8cb31-43ca-4c89-b1c7-9bc870493a2f.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250314%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250314T013540Z&X-Amz-Expires=300&X-Amz-Signature=057f17950b059b7bec3678f7f12befc2a7fe5ca130851b433d1248b4352cabd8&X-Amz-SignedHeaders=host" />
 
 ### 기능-4
 
