@@ -71,26 +71,26 @@
 
 <img alt='' src="https://github.com/user-attachments/assets/2693760f-a7bd-42a4-b161-df04fa917803" />
 
-### 기능-3
+### 카카오 친구 연동
 
-> 카카오 친구 연동 : 카카오 친구 목록을 자동 조회하여 마라톤에 참여한 친구를 손쉽게 등록하는 기능 제공
+> 카카오 친구 목록을 자동 조회하여 마라톤에 참여한 친구를 손쉽게 등록하는 기능 제공
 
 <img alt='friend link operation of mobile and watch' src="https://github.com/user-attachments/assets/f401b4fe-bd9d-47fe-8f00-76a9a3f2ebde" />
 
-<img width="49%" alt='mobile friend list page' src="https://github.com/user-attachments/assets/8b6407b7-d646-4eb0-9d77-8393c66af853" />
-<img width="49%" alt='mobile friend link page' src="https://github.com/user-attachments/assets/6b670a61-29c3-4072-aa70-67b335644bfe" />
+<img width="30%" alt='mobile friend list page' src="https://github.com/user-attachments/assets/8b6407b7-d646-4eb0-9d77-8393c66af853" />
+<img width="30%" alt='mobile friend link page' src="https://github.com/user-attachments/assets/6b670a61-29c3-4072-aa70-67b335644bfe" />
 
-### 기능-4
+### 모바일, 워치 연동을 통한 개인 기록 조회
 
-> 모바일, 워치 연동을 통한 개인 기록 조회 : 스마트워치를 통해 사용자가 자신의 마라톤 기록을 실시간으로 확인하는 기능 제공
+> 스마트워치를 통해 사용자가 자신의 마라톤 기록을 실시간으로 확인하는 기능 제공
 
-<img alt='' src="https://github.com/user-attachments/assets/e69a4217-dca2-4771-9719-cedbd2347307" />
+<img width="30%" alt='' src="https://github.com/user-attachments/assets/e69a4217-dca2-4771-9719-cedbd2347307" />
 
-### 기능-5
+### 모바일, 워치 연동을 통한 실시간 팀 정보 조회
 
-> 모바일, 워치 연동을 통한 실시간 팀 정보 조회 : 마라톤이 진행중일 때 스마트워치를 통해 팀의 실시간 위치, 인접 팀원 정보, 랭킹을 제공
+> 마라톤이 진행중일 때 스마트워치를 통해 팀의 실시간 위치, 인접 팀원 정보, 랭킹을 제공
 
-<img alt='' src="https://github.com/user-attachments/assets/66ee2f9c-45d2-47af-9a96-104d0daec4b3" />
+<img width="30%" alt='' src="https://github.com/user-attachments/assets/66ee2f9c-45d2-47af-9a96-104d0daec4b3" />
 
 <br />
 
