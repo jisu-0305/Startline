@@ -1,7 +1,7 @@
 <div align="center">
   <h1>출발선</h1>
   
-![Frame 30](메인화면 이미지 주소)
+<img src="https://github.com/user-attachments/assets/34ccdf45-4fa1-49b3-9b15-85d50d8e08da" alt="Image" width="300">
 </div>
 
 > 배포 링크 <br /> > **https://drive.google.com/drive/folders/1yEKb8Xr3KZ6qOkDoXCN2YFPnJTvZlesq**
