@@ -89,7 +89,7 @@
 
 > 마라톤이 진행중일 때 스마트워치를 통해 팀의 실시간 위치, 인접 팀원 정보, 랭킹을 제공
 
-<img width="60%" alt='' src="[https://github.com/user-attachments/assets/3b86174d-e956-4fc7-a8d7-de7a3bc708fb](https://github.com/user-attachments/assets/70acdccb-ddb8-4fe3-b746-f2ab96cb1b87)" />
+<img width="60%" alt='' src="https://github.com/user-attachments/assets/70acdccb-ddb8-4fe3-b746-f2ab96cb1b87)" />
 
 <br>
 <br>
